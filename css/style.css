@@ -12,6 +12,8 @@
     background-color:#0c0a09;
     color: #e2e8f0;
     font-weight: bold;
+    width: 100%;
+    position: fixed;
 }
 
 .nav-right{  
@@ -50,17 +52,21 @@
     letter-spacing: 8px;
 }
 
-button{
+.button{
     background-color: #7c3aed;
     color: #e2e8f0;
-    padding-left: 130px;
-    padding-right: 130px;
-    padding-top: 4px;
-    padding-bottom: 4px;
     border: none;
     border-radius: 10px 10px 10px 10px;
-    margin-top: 25px;
     font-weight: bold;
+    margin-top: 25px; 
+}
+
+.butt-jumbo{ 
+    padding:4px 130px;       
+}
+
+.butt-post{
+    padding: 4px 60px;
 }
 
 .second-section{
@@ -122,11 +128,8 @@ h6{
         letter-spacing: 8px;
     }
 
-    button{
-        padding-left: 200px;
-        padding-right: 200px;
-        padding-top: 4px;
-        padding-bottom: 4px;
+    .butt-jumbo{
+       padding: 4px 200px;
     }
 
     .second-section{
@@ -161,11 +164,8 @@ h6{
         justify-content: center;
     }
 
-    button{
-        padding-left: 80px;
-        padding-right: 80px;
-        padding-top: 4px;
-        padding-bottom: 4px;
+    .butt-jumbo{
+        padding: 4px 80px;
     }    
 
     .jumbo {
