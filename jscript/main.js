@@ -11,16 +11,20 @@ function initSlide() {
     elemSlideOut.addEventListener("click", moveOut);
 
     const slide = document.getElementById("slide");
-    const body = document.getElementById("body");
+    const body = document.getElementById("body");    
 
     function moveIn() {
-        slide.classList.add("left");
         body.classList.add("no-scroll");
+        slide.classList.add("left-1");
+        setTimeout(function() {
+            slide.classList.add("left")
+        }, 1900)
     };
 
     function moveOut() {
+        slide.classList.remove("left-1");
         slide.classList.remove("left");
-        setTimeout(function () { body.classList.remove("no-scroll"); }, 2000);
+        setTimeout(function () { body.classList.remove("no-scroll"); }, 1500);
     };
 
 }
@@ -29,7 +33,7 @@ function initSlide() {
 
 document.addEventListener("DOMContentLoaded", function () {
     initSlide();
-    printPosts();    
+    printPosts();
 });
 
 
@@ -42,7 +46,7 @@ function printPosts() {
     }
 
     for (let i = 0; i < posts.length; i++) {
-        
+
         const post = printPost(posts[i]);
 
         sectionPost.appendChild(post);
@@ -54,9 +58,10 @@ function printPosts() {
 function printPost(data) {
 
     const post = document.createElement("div");
+    post.classList.add("post");
+
     post.innerHTML =
         `
-    <div class="post">
     <h5>
        ${data.title}
     </h5>
@@ -74,8 +79,7 @@ function printPost(data) {
        <div class="hv"><a class:"viewmore" href="viewmore.html?id=${data.id}">View More</a></div>
     </div>
 
-   </div>
-   `
+      `
     return post;
 }
 
